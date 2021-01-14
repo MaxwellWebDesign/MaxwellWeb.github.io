@@ -1,0 +1,62 @@
+background(153, 222, 222);//sky
+
+fill(69, 66, 52);
+rect(60, 210, 284, 152);
+
+fill(250, 238, 100);//sun
+ellipse(91, 70, 110, 110);
+fill(255, 234, 0);
+ellipse(91, 70, 100, 100);
+
+for(var i=0; i<20; i++) {//bricks
+    var lineY = 211 + (i * 8);
+    line(60, lineY, 345, lineY);
+}
+
+for(var t=0; t<20; t++) {
+    var lineX = 60 + (t * 15);
+    line(lineX, 210, lineX, 363);
+}
+
+fill(99, 98, 86);
+rect(187, 35, 194, 195);
+
+for(var w=0; w<20; w++) {//windows
+    strokeWeight(3);
+    fill(255, 234, 71);
+    var ventanilla = 204 + (w * 78);
+    ellipse(ventanilla, 89, 63, 79);
+}
+
+strokeWeight(3);//windows
+line(252, 95, 312, 95);
+ellipse(355, 90, 52, 78);
+line(329, 95, 390, 95);
+ellipse(209, 90, 52, 78);
+line(234, 95, 173, 95);
+line(282, 127, 282, 51);
+
+strokeWeight(1);
+fill(99, 98, 86);
+triangle(121, 100, 10, 240, 121, 240);
+
+fill(107, 69, 13);//door
+rect(180, 280, 40, 83);
+
+fill(189, 255, 250);
+rect(183, 285, 34, 74);
+
+var x = -32;//flora
+while(x < 399) {
+    image(getImage("cute/TreeTall"), x, 273, 90, 150);
+
+    x += 100;
+}
+
+var shortX = 33;
+while(shortX < 399) {
+    
+    image(getImage("cute/TreeShort"), shortX, 314, 60, 120);
+
+    shortX += 100;
+}
